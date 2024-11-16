@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000"; // Update with your backend URL if different
+const API_URL = "http://localhost:5000"; 
 
 // DOM elements
 const loginForm = document.getElementById("login-form");
