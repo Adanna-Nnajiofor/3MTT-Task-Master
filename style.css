@@ -11,13 +11,19 @@ body {
 }
 
 #app {
-  width: 50%;
+  width: 100%;
+  max-width: 600px; 
   margin: 0 auto;
   padding: 20px;
 }
 
 header {
   text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 form {
@@ -79,4 +85,93 @@ button.delete-task {
 
 button.delete-task:hover {
   background-color: #ff3333;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For small screens like mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  #app {
+    width: 90%; 
+    padding: 10px;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 14px; 
+  }
+
+  button#logout-btn {
+    font-size: 12px; 
+  }
+
+  #task-section {
+    margin-top: 30px;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-item button.delete-task {
+    margin-top: 10px;
+  }
+}
+
+/* For very small screens (mobile portrait) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 12px; 
+    padding: 8px;
+  }
+
+  #app {
+    padding: 5px;
+  }
+
+  button#logout-btn {
+    font-size: 10px;
+  }
+
+  /* Adjust task items on very small screens */
+  .task-item {
+    font-size: 14px; 
+  }
+}
+
+/* For larger screens (tablets, desktop) */
+@media (min-width: 1024px) {
+  #app {
+    width: 60%; 
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 18px; 
+  }
+
+  #task-section {
+    margin-top: 50px;
+  }
 }

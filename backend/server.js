@@ -14,11 +14,12 @@ const app = express();
 // CORS middleware configuration
 app.use(
   cors({
-    origin: "http://localhost:3000", 
+    origin: "*", 
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
 
 // Middleware to parse JSON
 app.use(express.json());

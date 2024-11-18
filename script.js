@@ -9,6 +9,7 @@ const logoutBtn = document.getElementById("logout-btn");
 const taskForm = document.getElementById("taskForm");
 const registerSection = document.getElementById("register-section");
 const loginSection = document.getElementById("auth-section");
+const taskList = document.getElementById("task-list");
 
 // Show the register form and hide the login form
 document.getElementById("go-to-register").addEventListener("click", (e) => {
