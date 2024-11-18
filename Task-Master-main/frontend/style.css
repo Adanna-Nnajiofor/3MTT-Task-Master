@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+#app {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button#logout-btn {
+  background-color: #ff4d4d;
+  font-size: 14px;
+  margin: 20px auto;
+}
+
+#task-section {
+  margin-top: 40px;
+}
+
+#taskList {
+  margin-top: 20px;
+}
+
+.task-item {
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+button.delete-task {
+  background-color: #ff4d4d;
+  color: white;
+  cursor: pointer;
+}
+
+button.delete-task:hover {
+  background-color: #ff3333;
+}
