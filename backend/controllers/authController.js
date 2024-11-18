@@ -12,7 +12,7 @@ exports.register = async (req, res) => {
     const user = new User({
       username,
       email,
-      password: hashedPassword, // Store the hashed password
+      password: hashedPassword, 
     });
 
     await user.save();

@@ -1,24 +1,28 @@
-const API_URL = "http://localhost:5000"; 
+const API_URL = "http://localhost:5000";
 
 // DOM elements
 const loginForm = document.getElementById("login-form");
 const registerForm = document.getElementById("register-form");
 const taskSection = document.getElementById("task-section");
 const authSection = document.getElementById("auth-section");
-const taskList = document.getElementById("taskList");
 const logoutBtn = document.getElementById("logout-btn");
 const taskForm = document.getElementById("taskForm");
+const registerSection = document.getElementById("register-section");
+const loginSection = document.getElementById("auth-section");
 
-// Switch between login and registration
-document.getElementById("go-to-register").onclick = () => {
-  document.getElementById("login-section").style.display = "none";
-  document.getElementById("register-section").style.display = "block";
-};
+// Show the register form and hide the login form
+document.getElementById("go-to-register").addEventListener("click", (e) => {
+  e.preventDefault();
+  loginSection.style.display = "none"; 
+  registerSection.style.display = "block"; 
+});
 
-document.getElementById("go-to-login").onclick = () => {
-  document.getElementById("register-section").style.display = "none";
-  document.getElementById("login-section").style.display = "block";
-};
+// Show the login form and hide the register form
+document.getElementById("go-to-login").addEventListener("click", (e) => {
+  e.preventDefault();
+  registerSection.style.display = "none";
+  loginSection.style.display = "block";
+});
 
 // Handle user registration
 registerForm.onsubmit = async (e) => {
@@ -38,8 +42,9 @@ registerForm.onsubmit = async (e) => {
   const data = await response.json();
   if (response.ok) {
     alert("Registration successful!");
-    document.getElementById("register-section").style.display = "none";
-    document.getElementById("login-section").style.display = "block";
+    // After registration, show login form again
+    registerSection.style.display = "none";
+    loginSection.style.display = "block";
   } else {
     alert(data.error || "Registration failed.");
   }
